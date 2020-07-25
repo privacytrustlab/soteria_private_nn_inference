@@ -2,9 +2,7 @@
 
 ## Setup
 
-Make sure you have **docker** installed before you 
-
-Set up the docker image. Navigate to the code directory containing the `Dockerfile`, and execute:
+Make sure you have **docker** installed. Set up the docker image. Navigate to the code directory containing the `Dockerfile`, and execute:
 
     $ docker build ./
 
