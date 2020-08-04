@@ -1,0 +1,15 @@
+Name, Option Name, Type, Default Value
+Batch Size, batch_size, int, 64
+Learning Rate, lr, float, 0.01
+Minimum Learning Rate, m_lr, float, 0.005
+Momentum, momentum, float, 0.9
+Weight Decay, wd, float, 3e-4
+Epochs, epochs, int, 100
+First Operation Channels, init_channels, int, 8
+Number of cells, layers, int, 3
+Path to save model, model_path, str, saved_models
+Gradient Clipping, grad_clip, float, 5
+Data Folder, data, str, ./data
+Number of workers, num_workers, int, 2
+Epochs (train.py), epochs, int, 200
+First Operation Channels (train.py), init_channels, int, 16

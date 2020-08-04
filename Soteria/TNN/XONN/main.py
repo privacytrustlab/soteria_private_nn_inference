@@ -8,7 +8,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.autograd import Variable
-from modules import  TernaryLinear,TernaryConv2d, Ternarize
+from modules import  BinaryLinear,BinaryConv2d, Binarize
 import utils
 import numpy as np
 from collections import OrderedDict
@@ -40,14 +40,14 @@ args.cuda = not args.no_cuda and torch.cuda.is_available()
 
 kwargs = {'num_workers': 0, 'pin_memory': True} if args.cuda else {}
 train_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('../data', train=True, download=True,
+    datasets.MNIST('./data', train=True, download=True,
                    transform=transforms.Compose([
                        transforms.ToTensor(),
                        transforms.Normalize((0.1307,), (0.3081,))
                    ])),
     batch_size=args.batch_size, shuffle=True, **kwargs)
 test_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('../data', train=False, transform=transforms.Compose([
+    datasets.MNIST('./data', train=False, transform=transforms.Compose([
                        transforms.ToTensor(),
                        transforms.Normalize((0.1307,), (0.3081,))
                    ])),
@@ -63,15 +63,15 @@ class Net(nn.Module):
         self.conv_fp = nn.Conv2d(1, int(16*self.infl_ratio), kernel_size=3, padding=1)
         self.htanh_fp = nn.Hardtanh()
         self.bn_fp = nn.BatchNorm2d(int(16*self.infl_ratio))
-        self.conv1 = TernaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=3, padding=1, bias=False)
+        self.conv1 = BinaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=3, padding=1, bias=False)
         self.mp1 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.htanh1 = nn.Hardtanh()
-        self.conv2 = TernaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=5, padding=2, bias=False)
+        self.conv2 = BinaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=5, padding=2, bias=False)
         self.htanh2 = nn.Hardtanh()
-        self.fc1 = TernaryLinear(int(16*self.infl_ratio*14*14), int(100*self.infl_ratio), bias=False)
+        self.fc1 = BinaryLinear(int(16*self.infl_ratio*14*14), int(100*self.infl_ratio), bias=False)
         self.htanh_fc1 = nn.Hardtanh()
         self.bn_fc1 = nn.BatchNorm1d(int(100*self.infl_ratio), affine=False)
-        self.fc2 = TernaryLinear(int(100*self.infl_ratio), 10, bias=False)
+        self.fc2 = BinaryLinear(int(100*self.infl_ratio), 10, bias=False)
         self.logsoftmax=nn.LogSoftmax()
 
     def forward(self, x):

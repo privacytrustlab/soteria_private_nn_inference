@@ -13,7 +13,6 @@ from model_search import Network
 parser = argparse.ArgumentParser(description = 'model searcher.')
 parser.add_argument('--batch_size', type=int, default=64, help='the batch size')
 parser.add_argument('--lr', type=float, default=0.01, help='init learning rate')
-parser.add_argument('--arch_lr', type=float, default=3e-4, help='learning rate for arch encoding')
 parser.add_argument('--m_lr',type=float, default=0.005, help='min learning rate')
 parser.add_argument('--momentum',type=float, default=0.9, help='momentum')
 parser.add_argument('--wd', type=float, default=3e-4, help='weight decay')

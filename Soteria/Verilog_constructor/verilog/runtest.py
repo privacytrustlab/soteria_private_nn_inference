@@ -3,13 +3,14 @@ import time
 import os
 import argparse
 import random
+from getresults import GetResults
 
 parser = argparse.ArgumentParser()
 
 
-parser.add_argument("ALICE_INPUT_SIZE", help="Alice's input size",
+parser.add_argument("--ALICE_INPUT_SIZE", help="Alice's input size",
                     default=784, type=int)
-parser.add_argument("BOB_NUM_WEIGHTS", help="Bob - Number of weight parameters",
+parser.add_argument("--BOB_NUM_WEIGHTS", help="Bob - Number of weight parameters",
                     default=944, type=int)
 parser.add_argument("--NUM_EXPERIMENTS", help="Number of times experiment is to be run. Default = 5",
                     default=5, type=int)
@@ -25,7 +26,8 @@ def token_hex(size):
 
 def runTest(bob_weights, alice_input):
 
-    commands = [args.TG_HOME + '/bin/garbled_circuit/TinyGarble --alice --scd_file /app/Soteria/Verilog_constructor/verilog/syn/mlnn.scd --input ' + alice_input, args.TG_HOME + '/bin/garbled_circuit/TinyGarble --bob --scd_file /app/Soteria/Verilog_constructor/verilog/syn/mlnn.scd --input ' + bob_weights]
+    commands = [args.TG_HOME + '/bin/garbled_circuit/TinyGarble --alice --scd_file /app/Soteria/Verilog_constructor/verilog/syn/mlnn.scd --log2std --input ' + alice_input,
+                args.TG_HOME + '/bin/garbled_circuit/TinyGarble --bob --scd_file /app/Soteria/Verilog_constructor/verilog/syn/mlnn.scd --log2std --input ' + bob_weights]
 
     try:
         process0 = Popen(commands[0], shell=True)

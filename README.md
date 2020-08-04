@@ -1,8 +1,10 @@
 # Soteria
 
+A system that allows secure machine learning inference in a two-party setting. The system automatically searches for an optimal ternary neural network architecture, trains it, and then builds the requisite files for secure inference.
+
 ## Setup
 
-Make sure you have **docker** installed. Set up the docker image. Navigate to the code directory containing the `Dockerfile`, and execute:
+Make sure you have **docker** installed before you set up the docker image. Navigate to the code directory containing the `Dockerfile`, and execute:
 
     $ docker build ./
 
@@ -64,7 +66,7 @@ This will generate a SystemVerilog file `multlayer1.sv` along with attached modu
 
 A very small network has been trained and used to generate the SystemVerilog code for demonstration of protocol execution. This can be found in the directory `/app/Soteria/Verilog_constructor/TNN_mini`. The `convert_verilog.py` script has been executed on the weights and architecture of the model, and the resultant verilog code is stored in directory `/app/Soteria/Verilog_constructor/verilog`.
 
-**If pre-trained model and corresponding saved weights file exist:** Place the files in the directory `/app/Soteria/Verilog_constructor/TNN_mini`. Note that if the number of operations/size of operations is large, it may take up to a few hours to build and synthesize the subsequent Verilog files. The example provided builds in a couple of seconds, and synthesizes in a few minutes.
+**If pre-trained model and corresponding saved weights file exist, for any architecture you desire:** Place the files in the directory `/app/Soteria/Verilog_constructor/TNN_mini`. Note that if the number of operations/size of operations is large, it may take up to a few hours to build and synthesize the subsequent Verilog files. The example provided builds in a couple of seconds, and synthesizes in a few minutes.
 
 **If previously generated SystemVerilog file exists:** Place the generated `.sv` file along with the attached module `.sv` files in the directory `/app/Soteria/Verilog_constructor`.
 
@@ -77,6 +79,8 @@ This will generate a `<synthfilename.v>` file in the directory `/app/Soteria/Ver
 #### Example provided
 
 A pre-synthesized version of the SystemVerilog code generated for the model above can be found as file `syn/mlnn.v` in directory `/app/Soteria/Verilog_constructor/verilog`.
+
+**Note:** If the network or size of layers is very large, it may take too long to synthesize. For the experiments presented in the paper, we emulate the entire system by piecing together components instead of synthesizing it as a whole and calculating the costs of the entire model in one go. This emulation strategy results in slightly larger runtime numbers compared to a scenario where the entire network is built.
 
 ## Run Garbled Circuit test
 
@@ -112,8 +116,28 @@ Provide Bob's binary inputs in a single hexadecimal input string. This will gene
 
 To run the experiment automatically using generated SCD and netlist files in the example above, using random inputs for the secure layers, can be executed by running:
 
-    $ python3 /app/Soteria/Verilog_constructor/verilog/runtest.py
+    $ python3 /app/Soteria/Verilog_constructor/verilog/runtest.py > <output-file>
 
-This will automatically create two separate processes and run the test, generating the output.
+This will automatically create two separate processes and run the test, generating the output in the output file. Do specify the output file name.
+
+To clean up the output file and obtain the results in the format presented in the paper, run:
+
+    $ python3 /app/Soteria/Verilog_constructor/verilog/getresults.py <output-file> <TSC-freq>
+
+Please provide the path to the output file generated in the previous step, as well as the Invariant TSC frequency for the processor you are using for the test.
 
 For the model SystemVerilog file generated and synthesized in the previous steps, the time for execution of Bob's process is ~20 ms including overheads, using an Intel Xeon 8124M processor @3.0 GHz.
+
+## Code References
+
+Code from the following sources was used and modified to build parts of our system.
+
+#### 1. DARTS
+
+GitHub: https://github.com/MandyMo/DARTS  
+Paper: Hanxiao Liu, Karen Simonyan and Yiming Yang. _DARTS: Differentiable Architecture Search_, ICLR 2019.
+
+#### 2. BinaryNet.pytorch
+
+GitHub: https://github.com/itayhubara/BinaryNet.pytorch  
+Paper: Itay Hubara, Matthieu Courbariaux, Daniel Soudry, Ran El-Yaniv and Yoshua Bengio. _Binarized Neural Networks_, NIPS 2016.

@@ -1,53 +1,68 @@
 
 from __future__ import print_function
 import argparse
-import os
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.autograd import Variable
-from modules import  TernaryLinear,TernaryConv2d, Ternarize
-import utils
+from modules import  BinaryLinear, BinaryConv2d
+from modules import  Binarize
 import numpy as np
-from collections import OrderedDict
+import re
+import random
 import pickle
+import os
+from collections import OrderedDict
 
-import warnings
-warnings.filterwarnings('ignore')
 
-parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
-parser.add_argument('--batch-size', type=int, default=50, metavar='N',
-                    help='input batch size for training (default: 256)')
-parser.add_argument('--test-batch-size', type=int, default=10000, metavar='N',
-                    help='input batch size for testing (default: 1000)')
-parser.add_argument('--epochs', type=int, default=40, metavar='N',
+torch.set_printoptions(linewidth=160, threshold=5000)
+torch.set_num_threads(1) 
+torch.set_default_tensor_type('torch.cuda.FloatTensor')
+
+# Training settings
+parser = argparse.ArgumentParser(description='PyTorch CIFAR Example')
+parser.add_argument('--epochs', type=int, default=10, metavar='N',
                     help='number of epochs to train (default: 10)')
-parser.add_argument('--lr', type=float, default=0.001, metavar='LR',
-                    help='learning rate (default: 0.001)')
+parser.add_argument('--lr', type=float, default=0.01, metavar='LR',
+                    help='learning rate (default: 0.01)')
 parser.add_argument('--momentum', type=float, default=0.5, metavar='M',
                     help='SGD momentum (default: 0.5)')
+parser.add_argument('--batch_size', type=int, default=64, metavar='B',
+                    help='Batch Size (default 64)')
+parser.add_argument('--test-batch-size', type=int, default=32, metavar='T',
+                    help='input batch size for testing (default: 1000)')
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='disables CUDA training')
-parser.add_argument('--gpus', default=0,
+parser.add_argument('--seed', type=int, default=154, metavar='S',
+                    help='random seed (default: 1)')
+parser.add_argument('--gpus', default=3,
                     help='gpus used for training - e.g 0,1,3')
-parser.add_argument('--log-interval', type=int, default=200, metavar='N',
+parser.add_argument('--log-interval', type=int, default=100, metavar='L',
                     help='how many batches to wait before logging training status')
 args = parser.parse_args()
-args.cuda = not args.no_cuda and torch.cuda.is_available()
+
+batch_size = 100
+printtofile = False
+
+args.cuda = True
+torch.manual_seed(args.seed)
+if args.cuda:
+    torch.cuda.manual_seed(args.seed)
 
 
-kwargs = {'num_workers': 0, 'pin_memory': True} if args.cuda else {}
+kwargs = {'num_workers': 0, 'pin_memory': False} if args.cuda else {}
+
 train_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('../data', train=True, download=True,
+    datasets.CIFAR10('./data', train=True, download=True,
                    transform=transforms.Compose([
                        transforms.ToTensor(),
                        transforms.Normalize((0.1307,), (0.3081,))
                    ])),
     batch_size=args.batch_size, shuffle=True, **kwargs)
 test_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('../data', train=False, transform=transforms.Compose([
+    datasets.CIFAR10('./data', train=False, transform=transforms.Compose([
                        transforms.ToTensor(),
                        transforms.Normalize((0.1307,), (0.3081,))
                    ])),
@@ -55,52 +70,55 @@ test_loader = torch.utils.data.DataLoader(
 
 
 
-
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.infl_ratio=1.25
-        self.conv_fp = nn.Conv2d(1, int(16*self.infl_ratio), kernel_size=3, padding=1)
-        self.htanh_fp = nn.Hardtanh()
-        self.bn_fp = nn.BatchNorm2d(int(16*self.infl_ratio))
-        self.conv1 = TernaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=3, padding=1, bias=False)
-        self.mp1 = nn.MaxPool2d(kernel_size=2, stride=2)
-        self.htanh1 = nn.Hardtanh()
-        self.conv2 = TernaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=5, padding=2, bias=False)
-        self.htanh2 = nn.Hardtanh()
-        self.fc1 = TernaryLinear(int(16*self.infl_ratio*14*14), int(100*self.infl_ratio), bias=False)
-        self.htanh_fc1 = nn.Hardtanh()
-        self.bn_fc1 = nn.BatchNorm1d(int(100*self.infl_ratio), affine=False)
-        self.fc2 = TernaryLinear(int(100*self.infl_ratio), 10, bias=False)
-        self.logsoftmax=nn.LogSoftmax()
+        self.infl_ratio=1
+        self.features = nn.Sequential(
+            nn.Conv2d(3, 128*self.infl_ratio, kernel_size=3, padding=1, bias=False),
+            nn.BatchNorm2d(128*self.infl_ratio),
+
+            BinaryConv2d(128*self.infl_ratio, 128*self.infl_ratio, kernel_size=3, padding=1, bias=False),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+
+            BinaryConv2d(128*self.infl_ratio, 256*self.infl_ratio, kernel_size=3, padding=1, bias=False),
+
+            BinaryConv2d(256*self.infl_ratio, 256*self.infl_ratio, kernel_size=3,padding=1, bias=False),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+
+            BinaryConv2d(256*self.infl_ratio, 512*self.infl_ratio, kernel_size=3, padding=1, bias=False),
+
+            BinaryConv2d(512*self.infl_ratio, 512*self.infl_ratio, kernel_size=3, padding=1, bias=False),
+            nn.MaxPool2d(kernel_size=2, stride=2),
+        )
+        
+        self.classifier = nn.Sequential(
+            BinaryLinear(512*self.infl_ratio*4*4, 1024, bias=False),
+            nn.BatchNorm1d(1024),
+            nn.Dropout(0.5),
+            nn.Hardtanh(),
+            BinaryLinear(1024, 10, bias=False),
+            nn.LogSoftmax()
+        )
+
 
     def forward(self, x):
-        x = self.conv_fp(x)
-        x = self.bn_fp(x)
-        #x = self.htanh_fp(x)
-        x = self.conv1(x)
-        x = self.mp1(x)
-        #x = self.htanh1(x)
-        x = self.conv2(x)
-        #x = self.htanh2(x)
-        x = x.view(-1, int(16*self.infl_ratio*14*14))
-        x = self.fc1(x)
-        x = self.bn_fc1(x)
-        #x = self.htanh_fc1(x)
-        x = self.fc2(x)
-        return self.logsoftmax(x)
+        x = self.features(x)
+        x = x.view(-1, 512*self.infl_ratio*4*4)
+        x = self.classifier(x)
+        return x
+
 
 
 model = Net()
 if args.cuda:
+    print("Running on GPU")
     torch.cuda.set_device(0)
     model.cuda()
 
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=args.lr)
-
-
+optimizer = optim.AdamW(model.parameters(), lr=args.lr)
 def train(epoch):
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
@@ -157,9 +175,6 @@ def save_model():
     weights_file = open(os.path.join(dirname, "weights.dat"), 'wb')
     pickle.dump(weights_dict, weights_file)
     weights_file.close()
-
-
-
 
 best_acc = 0.0
 
