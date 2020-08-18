@@ -1,0 +1,564 @@
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 416388580	(cc/bit) = 441090
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 417728402	(cc/bit) = 442509
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 417766
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6780348
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 450487372
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1097990
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9486074
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 461383762
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 417498224	(cc/bit) = 442265
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 377710
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5757796
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 417250232	(cc/bit) = 442002
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 447860324
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1180538
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9509814
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 459980612
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 364502868	(cc/bit) = 386126
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 297164
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5750862
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 394095830
+0
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 367486356	(cc/bit) = 389286
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 488592
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 3681974
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 399466696
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 475309372	(cc/bit) = 503506
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 475307516	(cc/bit) = 503504
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 270378
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5651278
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 510795584
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 5850832
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4578502
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 515739948
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 438420200	(cc/bit) = 464428
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 249418
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5625410
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 471135412
+0
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 443700298	(cc/bit) = 470022
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 955716
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 7623978
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 484597226
+0
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 419754082	(cc/bit) = 444655
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 238692
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5647514
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 439449674
+0
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 411599596	(cc/bit) = 436017
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 958092
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 7479550
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 450465154
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 450875848	(cc/bit) = 477623
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 454323216	(cc/bit) = 481275
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 291544
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6278944
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 485604128
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 3693898
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9481662
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 496407228
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 527231728	(cc/bit) = 558508
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 520516036	(cc/bit) = 551394
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 293144
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5612574
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 552570030
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1090140
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9483656
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 564241158
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 428765742	(cc/bit) = 454201
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 432915068	(cc/bit) = 458596
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 336964
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5664822
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 462679948
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 2216318
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 7905668
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 471418926
+03FF
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 524462556	(cc/bit) = 555575
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 512281954	(cc/bit) = 542672
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 359520
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5584034
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 549293672
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 4967308
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4134682
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 553737324
+03FF
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 460844656	(cc/bit) = 488183
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 447494172	(cc/bit) = 474040
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 354712
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6319778
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 486173784
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6701356
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 5109290
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 491836968
+03FF
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 600785740	(cc/bit) = 636426
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 595450716	(cc/bit) = 630774
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 287506
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5609846
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 625998250
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1756252
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9397144
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 636498274
+03FF
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 591557024	(cc/bit) = 626649
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 577752414	(cc/bit) = 612026
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 273320
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5656722
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 616883060
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6023330
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4433916
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 621633114
+03FF
+tcpip.cpp:60 [32mINFO[0m: Address already in use
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 480276984	(cc/bit) = 508768
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 480606730	(cc/bit) = 509117
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 379536
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6257822
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 518866472
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6853360
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 3922638
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 523376036
+0
+tcpip.cpp:60 [32mINFO[0m: Address already in use
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 452286492	(cc/bit) = 479117
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 441004542	(cc/bit) = 467166
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 378918
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6500038
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 476435382
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6521048
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 8098528
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 485428572
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 585743596	(cc/bit) = 620491
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 592143642	(cc/bit) = 627271
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 381196
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6345676
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 620645084
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1111330
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9421736
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 631624876
+03FF
+tcpip.cpp:60 [32mINFO[0m: Address already in use
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 476227172	(cc/bit) = 504478
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 476683802	(cc/bit) = 504962
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 412088
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6614984
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 524805768
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 7204262
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4235864
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 529584630
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 439018246	(cc/bit) = 465062
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 437143860	(cc/bit) = 463076
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 301644
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5529390
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 473003184
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 3608900
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9351678
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 483557460
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 402561622	(cc/bit) = 426442
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 297762
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6279080
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 409763110	(cc/bit) = 434071
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 440476728
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1303536
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 8202630
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 451088240
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 476240980	(cc/bit) = 504493
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 476708114	(cc/bit) = 504987
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 365954
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5637014
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 511969284
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 5894824
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4619092
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 516898586
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 489351098	(cc/bit) = 518380
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 489694832	(cc/bit) = 518745
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 381092
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5660778
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 526991644
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 5887518
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4231180
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 531708314
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 414644664	(cc/bit) = 439242
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 415533292	(cc/bit) = 440184
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 285966
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5696166
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 448690428
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1040498
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9387750
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 460336930
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 514289110	(cc/bit) = 544798
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 514686092	(cc/bit) = 545218
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 305088
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6392018
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 552916494
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6900016
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4348378
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 557812426
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 406417596	(cc/bit) = 430527
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 405482502	(cc/bit) = 429537
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 365170
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6275932
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 438975906
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 3204218
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 7956772
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 80
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 447822602
+80
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 448472084	(cc/bit) = 475076
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 455321036	(cc/bit) = 482332
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 410410
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6222300
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 485231744
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 1170784
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 7984852
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 0
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 495140266
+0
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 542736226	(cc/bit) = 574932
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 538352930	(cc/bit) = 570289
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 295056
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5601186
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 575751510
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6083110
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4136672
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 580344820
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 474068816	(cc/bit) = 502192
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 469382546	(cc/bit) = 497227
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 321892
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5764034
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 506829370
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6011590
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4751876
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 512027362
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 399536274	(cc/bit) = 423238
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 341006
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5683370
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 436510648
+0
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 407948828	(cc/bit) = 432149
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 976438
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 9486934
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 449736416
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 427492528	(cc/bit) = 452852
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 416349738	(cc/bit) = 441048
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 236316
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 5644170
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 455342784
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6048120
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 5549168
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 461549586
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 447175932	(cc/bit) = 473703
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 445555830	(cc/bit) = 471987
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 298760
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6345600
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 481223978
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 4329846
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 7920140
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 490327110
+03FF
+garbled_circuit_main.cpp:304 [32mINFO[0m: Connect Bob's client to Alice's server on 127.0.0.1:1234
+garbled_circuit_main.cpp:268 [32mINFO[0m: Open Alice's server on port: 1234
+garbled_circuit_high_mem.cpp:75 [32mINFO[0m: Alice transfer labels time (cc) = 466276692	(cc/bit) = 493937
+garbled_circuit_high_mem.cpp:118 [32mINFO[0m: Bob transfer labels time (cc) = 463382724	(cc/bit) = 490872
+garbled_circuit_high_mem.cpp:421 [32mINFO[0m: Non-secret skipped non-XOR gates = 1 out of 8607	 (0.0116185%)
+garbled_circuit_high_mem.cpp:427 [32mINFO[0m: Total garbled non-XOR gates = 8606
+garbled_circuit_high_mem.cpp:430 [32mINFO[0m: Alice communication time (cc) = 385584
+garbled_circuit_high_mem.cpp:431 [32mINFO[0m: Alice garbling time (cc) = 6188040
+garbled_circuit_main.cpp:282 [32mINFO[0m: Alice's output = 0
+garbled_circuit_main.cpp:283 [32mINFO[0m: Total Alice time (cc) = 499353384
+0
+garbled_circuit_high_mem.cpp:705 [32mINFO[0m: Bob communication time (cc) = 6770406
+garbled_circuit_high_mem.cpp:706 [32mINFO[0m: Bob evaluation time (cc) = 4673380
+garbled_circuit_main.cpp:319 [32mINFO[0m: Bob's output = 03FF
+garbled_circuit_main.cpp:320 [32mINFO[0m: Total Bob time (cc) = 504645702
+03FF
+0 0
+Total time 215.312
+0 0
+Total time 215.68
+0 0
+Total time 165.698
+0 0
+Total time 215.917
+0 0
+Total time 215.484
+0 0
+Total time 215.277
+0 0
+Total time 215.449
+0 0
+Total time 265.623
+0 0
+Total time 215.519
+0 0
+Total time 265.666
+0 0
+Total time 215.499
+0 0
+Total time 265.653
+0 0
+Total time 265.537
+Timeout Error, skippingCommand '/home/anshul/tc//bin/garbled_circuit/TinyGarble --alice --scd_file syn/mlnn.scd --log2std --input 9a4f80785771b38f933c58e9a638d0f7f301cec687ab0d9a64ef310cce7dfe4db02549f69567b7916a70864a9a4c339a96ce80909c09a9197df8817e7de0548c0efd5ce4f932127ae0ce7a31cbbd584c454bc199d30a5e529889980ac39db8a861f121f0eb97c368c9847dd654c0696635e588b9b8fea330a0a01f490252' timed out after 5 seconds
+255 0
+Total time 223.274
+Timeout Error, skippingCommand '/home/anshul/tc//bin/garbled_circuit/TinyGarble --alice --scd_file syn/mlnn.scd --log2std --input 2e840151a0c130d568760da41ab9234aec08c31a1f713820c9afe4ff140961880f7bbe4d8ac7aeda04ba6d6ba285c1fc21854964f69a4ab0720205b559f8307631afa29829686b87e971fe6480c9262729c4f19d4bc9deb09989cb837490d542141c543603246412572ebf2753ddf6878dc8e057c7645a2824d395b89b34' timed out after 5 seconds
+255 0
+Total time 222.195
+0 0
+Total time 265.874
+Timeout Error, skippingCommand '/home/anshul/tc//bin/garbled_circuit/TinyGarble --alice --scd_file syn/mlnn.scd --log2std --input 0279b28678b5c6a4f39a2314a70a8e7f7c5fc60b4b0f53b90bea4249f0405404349a8151d6d93bddabaad28a3560ae7eaa22c4bc9aca0de7881bd89acef6956f5ea1f216bdf95805d9bf4087d519e38c23a645cc7b46fca0c18ee10987bd9505b33f8b7d73b09051701d36d045c036df4bb21786804c27747ef9c5123b76' timed out after 5 seconds
+255 0
+Total time 222.897
+0 0
+Total time 215.285
+0 0
+Total time 215.646
+0 0
+Total time 215.736
+0 0
+Total time 215.944
+0 0
+Total time 215.758
+0 0
+Total time 265.526
+0 0
+Total time 215.028
+0 0
+Total time 215.712
+0 0
+Total time 265.706
+0 0
+Total time 215.411
+0 0
+Total time 215.594
+0 0
+Total time 215.181
+0 0
+Total time 215.636
+0 0
+Total time 215.578

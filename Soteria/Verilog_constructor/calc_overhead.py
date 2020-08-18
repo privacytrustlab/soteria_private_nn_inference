@@ -45,14 +45,14 @@ if __name__=="__main__":
 
     for name, op_type in architecture:
         print(name, op_type)
-    #     rt_off, rt_on, cm = StandardCosts(name, input_size_lh, input_size_d)
+        rt_off, rt_on, cm = StandardCosts(name, input_size_lh, input_size_d)
         
-    #     runtime_offline += rt_off
-    #     runtime_online += rt_on
-    #     communication += cm
+        runtime_offline += rt_off
+        runtime_online += rt_on
+        communication += cm
 
-    # communication_MB = float(communication)/(8*1024*1024)
-    # offline_ms = round(runtime_offline*1000.0/tsc_freq_GHz, 2)
-    # online_ms = round(runtime_online*1000.0/tsc_freq_GHz, 2)
+    communication_MB = float(communication)/(8*1024*1024)
+    offline_ms = round(runtime_offline*1000.0/tsc_freq_GHz, 2)
+    online_ms = round(runtime_online*1000.0/tsc_freq_GHz, 2)
 
-    # print("Offline = {} ms\nOnline = {} ms\nCommunication = {} MB".format(offline_ms, online_ms, communication_MB))
+    print("Offline = {} ms\nOnline = {} ms\nCommunication = {} MB".format(offline_ms, online_ms, communication_MB))
