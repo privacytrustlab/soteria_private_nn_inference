@@ -16,7 +16,7 @@ This will save a architecture pickle file `nas_arch.pkl` under directory `/app/S
 
 **If a pre-searched DARTS architecture exists:** Place the architecture pickle file in this directory.
 
-A pre-searched architecture pickle file can be found [here.](https://drive.google.com/file/d/1jvXTzDp53w4U3KJkFyNR-QK_ddFcZiEc/view?usp=sharing) 
+A pre-searched architecture pickle file can be found [here.](https://drive.google.com/file/d/1jvXTzDp53w4U3KJkFyNR-QK_ddFcZiEc/view?usp=sharing) Place the trained architecture file directly in the directory `/app/Soteria/Architecture_Search/trained_model`.
 
 The hyperparameters used to obtain this architecture are listed in file `hyperparameters.csv`. 
 
@@ -26,4 +26,4 @@ The hyperparameters used to obtain this architecture are listed in file `hyperpa
 
 This will train the model fully.
 
-The pre-trained model for the architecture above can be found [here.](https://drive.google.com/file/d/1oXCj69NhkMGuCS-lWNTD3wy1EmS9SzMe/view?usp=sharing)
+The pre-trained model pickle for the architecture above can be found [here.](https://drive.google.com/file/d/1oXCj69NhkMGuCS-lWNTD3wy1EmS9SzMe/view?usp=sharing) Place the trained model file directly in the directory `/app/Soteria/Architecture_Search/trained_model`.

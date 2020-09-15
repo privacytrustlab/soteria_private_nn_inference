@@ -1,7 +1,6 @@
 from subprocess import Popen
 import time
 import os
-# from secrets import token_hex
 import argparse
 import random
 import sys

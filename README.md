@@ -20,25 +20,17 @@ Replace `<image-id>` with the image ID obtained when the docker image is built.
 
 The first step is the DARTS Architecture Search, to find a suitable architecture for a given dataset, and then train it. Please see the code and [README file in `Soteria/Architecture_Search`](Soteria/Architecture_Search/README.md) for more details.
 
-## Standard TNN - train
+## TNN training
 
-Included is a simple Ternary Neural Network to demonstrate how TNNs work, using the 'MNIST' dataset for simplicity. This will only take a few minutes. To train, simply run:
-
-    $ python3 /app/Soteria/TNN/main.py
-
-This will save a `model_architecture.dat` file containing the architecture components list, and `weights.dat` file containing the ternary weights of the trained model.
-
-Simlarly, to run TNNs over 'CIFAR10' dataset, run:
-
-    $ python3 /app/Soteria/TNN/main_cifar.py
+Included is code for training any manually defined TNN on MNIST and CIFAR10 datasets, without going through the Architecture Search process. Please see the code and [README file in `Soteria/TNN`](Soteria/TNN/README.md) for more details. 
 
 ### XONN
 
-We try to reproduce the results for existing work XONN. Please refer to the directory `/app/Soteria/TNN/XONN/` for more details.
+We try to reproduce the results for existing work XONN. Please refer to the directory `Soteria/TNN/XONN/` for more details.
 
 ## Build and Execute
 
-To build the model in Verilog and execute the secure inference protocol, please refer to the code and [README file in `Soteria/Verilog_constructor`](Soteria/Verilog_constructor/README.md) for more details.
+To build the model in Verilog and execute the secure inference protocol, please refer to the code and [README file in `Soteria/Verilog_constructor`](Soteria/Verilog_constructor/README.md) for more details. You will also find some automated scripts to run the tests and generate the outputs in the directory. Further, scripts used to generate the different results in the paper are also provided, and references to those scripts are made in the README file in the directory.
 
 ## Code References
 

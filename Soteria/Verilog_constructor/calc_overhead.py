@@ -29,7 +29,7 @@ def cleanup_arch(arch):
         
     return res_arch
 
-
+  
 
 if __name__=="__main__":
     tsc_freq_GHz = sys.argv[1]

@@ -40,7 +40,6 @@ weights_file.close()
 dirname = os.path.dirname(__file__)
 architecture = cleanup_arch(open(os.path.join(dirname, "TNN_mini/model_architecture.dat")).read())
 
-
 print(weights_dict.keys())
 for op in weights_dict.keys():
     print(weights_dict[op].shape, end=" ")

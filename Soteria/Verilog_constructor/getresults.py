@@ -1,6 +1,6 @@
 import re
 import sys
-
+  
 def GetResults(filename, tsc_freq_GHz = None):
     tsc_freq_GHz = float(tsc_freq_GHz)*10e9
     f = open(filename).read()

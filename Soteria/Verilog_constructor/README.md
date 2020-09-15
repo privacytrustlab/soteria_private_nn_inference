@@ -75,3 +75,10 @@ To clean up the output file and obtain the results in the format presented in th
 Please provide the path to the output file generated in the previous step, as well as the Invariant TSC frequency for the processor you are using for the test.
 
 For the model SystemVerilog file generated and synthesized in the previous steps, the time for execution of Bob's process is ~20 ms including overheads, using an Intel Xeon 8124M processor @3.0 GHz.
+
+
+# Paper Results
+
+* `testrun_main.py` gives the results used for calculating and plotting the values in Figure 1, 2, 3, 4 and Table 5.
+* `standard_costs.py` gives the results used for calculating the values in Table 4 and 6. This script runs its own tests.
+* For results in table 3 and 7, results are obtained from architecture search scripts.
