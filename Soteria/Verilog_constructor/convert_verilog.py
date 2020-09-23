@@ -1,3 +1,5 @@
+# Converts a model architecture description along with its weights into verilog.  
+
 from collections import OrderedDict
 import numpy as np
 import pickle
@@ -6,6 +8,7 @@ import os
 from verilog_converters import getverilog_conv, getverilog_fc, getverilog_maxp, getverilog_pad, finalize
 
 def cleanup_arch(arch):
+    '''Extract relevant components from architecture description'''
     pad_count = 0
     arch = [x for x in arch.split("\n") if ('Ternary' in x or 'MaxPool' in x)]
     res_arch = []

@@ -1,3 +1,5 @@
+# This file calculates the standard costs (runtime and communication cost) of an operation in verilog
+
 from getresults import GetResults
 import pickle
 from collections import OrderedDict
@@ -8,6 +10,7 @@ from testrun import CreateRunTest
 import random
 
 def getOpProps(weights):
+    '''Find out the proportion of each type of weight in the operation'''
     ops = []
     props = []
 
@@ -34,6 +37,7 @@ def getOpProps(weights):
     return ops, props
 
 def getcosts_conv(op_size):
+    '''Get cost of convolution operation'''
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, createdotproduct(op_size, dirname))
     off, on, com = CreateRunTest(filename, "CONV") 
@@ -41,6 +45,7 @@ def getcosts_conv(op_size):
     return off, on, com
 
 def getcosts_fc(input_f, output_f, valid, numvalid):
+    '''Get cost of fully connected operation'''
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, createFC(random.randint(1,100), input_f, output_f, valid, numvalid, dirname))
     off, on, com = CreateRunTest(filename, "FC") 
@@ -49,6 +54,7 @@ def getcosts_fc(input_f, output_f, valid, numvalid):
 
 
 def getcosts_mp(op_size, i_lh, i_d):
+    '''Get cost of maxpool operation'''
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, createMaxpool(random.randint(1,100), i_lh, i_d, op_size, dirname))
     off, on, com = CreateRunTest(filename, "MP") 
@@ -56,6 +62,7 @@ def getcosts_mp(op_size, i_lh, i_d):
     return off, on, com
 
 def StandardCosts(name, i_lh, i_d, weights=None):
+    '''Main function that calculates the standard costs. If weights are not given, it uses values observed from a previous experiment.'''
     num_operations = i_lh*i_lh*i_d
 
     offline = 0

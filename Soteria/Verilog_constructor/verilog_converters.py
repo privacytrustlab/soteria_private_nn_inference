@@ -1,3 +1,5 @@
+# This file contains the functions for defining the module calls in verilog main module.
+
 import numpy as np
 import os
 import verilogcomponents

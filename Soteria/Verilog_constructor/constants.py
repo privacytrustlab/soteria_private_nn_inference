@@ -1,3 +1,5 @@
+# This file contains the cide for verilog files, that doesn't change irrespective of the size of input and weights.
+
 maxpool_verilog = """
 )
 (

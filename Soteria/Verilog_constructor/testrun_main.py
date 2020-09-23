@@ -6,10 +6,12 @@ import random
 import sys
 
 def token_hex(size):
+    '''Generates random hexadecimal input strings'''
     hex_code = "".join([random.choice(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']) for _ in range(size*2)])
     return hex_code
 
 def runTest(TG_HOME, bob_weights, alice_input, filename):
+    '''Executes a test sequence and prints the result'''
     os.system("chmod +x compile.sh")
     os.system("./compile.sh")
     os.system("~/tc/bin/scd/V2SCD_Main -i syn/mlnn_syn.v -o syn/mlnn.scd")
@@ -30,6 +32,7 @@ def runTest(TG_HOME, bob_weights, alice_input, filename):
 
 
 def RunTestMain(filename, optype, TG_HOME='/app/Soteria/TinyGarble/'):
+    '''Creates the test'''
     alice_input_size_bytes = 4096
     bob_weights_size_bytes = 4096
     alice_input = token_hex(alice_input_size_bytes)

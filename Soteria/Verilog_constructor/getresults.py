@@ -2,6 +2,7 @@ import re
 import sys
   
 def GetResults(filename, tsc_freq_GHz = None):
+    '''Filter and process results into human-understandable form'''
     tsc_freq_GHz = float(tsc_freq_GHz)*10e9
     f = open(filename).read()
     garbling_times = re.findall(r'Alice garbling time \(cc\) = ([0-9]+)', f)

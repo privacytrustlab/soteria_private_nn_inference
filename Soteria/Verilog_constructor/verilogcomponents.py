@@ -1,3 +1,5 @@
+# This file contains functions to create the module files for each operation.
+
 import constants
 import os
 
