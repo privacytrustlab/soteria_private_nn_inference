@@ -7,11 +7,12 @@ from torch.autograd import Function
 import numpy as np
 
 def Binarize(tensor):
+    '''Binarize input or weights (tensors)'''
     return ((((tensor.sign() + 1.0)/3.0).round())*2.0 - 1.0).type(torch.FloatTensor).cuda()
 
 
 class BinaryLinear(nn.Linear):
-
+    '''Linear operation with Binary weights and inputs'''
     def __init__(self, *kargs, **kwargs):
         super(BinaryLinear, self).__init__(*kargs, **kwargs)
 
@@ -26,6 +27,7 @@ class BinaryLinear(nn.Linear):
         return out
 
 class BinaryConv2d(nn.Conv2d):
+    '''2D convolution operation with Binary weights and inputs'''
 
     def __init__(self, *kargs, **kwargs):
         super(BinaryConv2d, self).__init__(*kargs, **kwargs)

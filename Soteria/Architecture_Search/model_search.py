@@ -1,3 +1,5 @@
+# This file contains the model architecture class used to conduct the search.
+
 from operators import *
 import torch
 import torch.nn as nn

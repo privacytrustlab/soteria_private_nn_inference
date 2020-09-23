@@ -1,3 +1,4 @@
+# This is the main file that controls the training of the searched architecture to generate a fully-trained model.
 
 import argparse
 import os

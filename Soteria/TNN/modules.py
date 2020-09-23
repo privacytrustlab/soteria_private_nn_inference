@@ -7,11 +7,13 @@ from torch.autograd import Function
 import numpy as np
 
 def Binarize(tensor):
+    '''Binarize input data (tensor)'''
     return ((((tensor.sign() + 1.0)/3.0).round())*2.0 - 1.0).type(torch.FloatTensor).cuda()
     
 
 
 def Delta(tensor):
+    '''Delta calculation for ternarization'''
     c = 0.7
     n = tensor[0].nelement()
     if(len(tensor.size()) == 4):     #convolution layer
@@ -22,6 +24,7 @@ def Delta(tensor):
 
 
 def Ternarize(tensor):
+    '''Ternarization of weights (tensor)'''
     output = torch.cuda.FloatTensor(tensor.size()).fill_(0)
     delta = Delta(tensor)
     for i in range(tensor.size()[0]):
@@ -34,6 +37,7 @@ def Ternarize(tensor):
 
 
 class TernaryLinear(nn.Linear):
+    '''Ternary linear operation'''
 
     def __init__(self, *kargs, **kwargs):
         super(TernaryLinear, self).__init__(*kargs, **kwargs)
@@ -49,7 +53,7 @@ class TernaryLinear(nn.Linear):
         return out
 
 class TernaryConv2d(nn.Conv2d):
-
+    '''Ternary 2D convolution operation'''
     def __init__(self, *kargs, **kwargs):
         super(TernaryConv2d, self).__init__(*kargs, **kwargs)
 

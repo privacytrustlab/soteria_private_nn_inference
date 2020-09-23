@@ -3,22 +3,8 @@ import torch
 import logging.config
 import shutil
 
-def setup_logging(log_file='log.txt'):
-    """Setup logging configuration
-    """
-    logging.basicConfig(level=logging.DEBUG,
-                        format="%(asctime)s - %(levelname)s - %(message)s",
-                        datefmt="%Y-%m-%d %H:%M:%S",
-                        filename=log_file,
-                        filemode='w')
-    console = logging.StreamHandler()
-    console.setLevel(logging.INFO)
-    formatter = logging.Formatter('%(message)s')
-    console.setFormatter(formatter)
-    logging.getLogger('').addHandler(console)
-
-
 def save_checkpoint(state, is_best, path=os.path.dirname(__file__), filename='checkpoint.pth.tar', save_all=False):
+    '''Save model checkpoint during training'''
     filename = os.path.join(path, filename)
     torch.save(state, filename)
     if is_best:
@@ -38,33 +24,6 @@ __optimizers = {
     'Rprop': torch.optim.Rprop,
     'RMSprop': torch.optim.RMSprop
 }
-
-
-def adjust_optimizer(optimizer, epoch, config):
-    """Reconfigures the optimizer according to epoch and config dict"""
-    def modify_optimizer(optimizer, setting):
-        if 'optimizer' in setting:
-            optimizer = __optimizers[setting['optimizer']](
-                optimizer.param_groups)
-            logging.debug('OPTIMIZER - setting method = %s' %
-                          setting['optimizer'])
-        for param_group in optimizer.param_groups:
-            for key in param_group.keys():
-                if key in setting:
-                    logging.debug('OPTIMIZER - setting %s = %s' %
-                                  (key, setting[key]))
-                    param_group[key] = setting[key]
-        return optimizer
-
-    if callable(config):
-        optimizer = modify_optimizer(optimizer, config(epoch))
-    else:
-        for e in range(epoch + 1):  # run over all epochs - sticky setting
-            if e in config:
-                optimizer = modify_optimizer(optimizer, config[e])
-
-    return optimizer
-
 
 def accuracy(output, target, topk=(1,)):
     """Computes the precision@k for the specified values of k"""

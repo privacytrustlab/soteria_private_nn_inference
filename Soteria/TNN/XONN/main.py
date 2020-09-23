@@ -1,4 +1,3 @@
-
 from __future__ import print_function
 import argparse
 import os
@@ -57,19 +56,16 @@ test_loader = torch.utils.data.DataLoader(
 
 
 class Net(nn.Module):
+    '''Class for defining the architecture of the model.'''
     def __init__(self):
         super(Net, self).__init__()
         self.infl_ratio=1.25
         self.conv_fp = nn.Conv2d(1, int(16*self.infl_ratio), kernel_size=3, padding=1)
-        self.htanh_fp = nn.Hardtanh()
         self.bn_fp = nn.BatchNorm2d(int(16*self.infl_ratio))
         self.conv1 = BinaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=3, padding=1, bias=False)
         self.mp1 = nn.MaxPool2d(kernel_size=2, stride=2)
-        self.htanh1 = nn.Hardtanh()
         self.conv2 = BinaryConv2d(int(16*self.infl_ratio), int(16*self.infl_ratio), kernel_size=5, padding=2, bias=False)
-        self.htanh2 = nn.Hardtanh()
         self.fc1 = BinaryLinear(int(16*self.infl_ratio*14*14), int(100*self.infl_ratio), bias=False)
-        self.htanh_fc1 = nn.Hardtanh()
         self.bn_fc1 = nn.BatchNorm1d(int(100*self.infl_ratio), affine=False)
         self.fc2 = BinaryLinear(int(100*self.infl_ratio), 10, bias=False)
         self.logsoftmax=nn.LogSoftmax()
@@ -77,16 +73,12 @@ class Net(nn.Module):
     def forward(self, x):
         x = self.conv_fp(x)
         x = self.bn_fp(x)
-        #x = self.htanh_fp(x)
         x = self.conv1(x)
         x = self.mp1(x)
-        #x = self.htanh1(x)
         x = self.conv2(x)
-        #x = self.htanh2(x)
         x = x.view(-1, int(16*self.infl_ratio*14*14))
         x = self.fc1(x)
         x = self.bn_fc1(x)
-        #x = self.htanh_fc1(x)
         x = self.fc2(x)
         return self.logsoftmax(x)
 
@@ -102,6 +94,7 @@ optimizer = optim.Adam(model.parameters(), lr=args.lr)
 
 
 def train(epoch):
+    '''Train the model for 1 epoch'''
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
         if args.cuda:
@@ -131,6 +124,7 @@ def train(epoch):
 
 
 def save_model():
+    '''Save the model and its weights'''
     # Saving Model architecture
     dirname = os.path.dirname(__file__)
     f = open(os.path.join(dirname, "model_architecture.dat"), 'w')
@@ -164,6 +158,7 @@ def save_model():
 best_acc = 0.0
 
 def test():
+    '''Test the model on test set'''
     global best_acc
     model.eval()
     test_loss = 0

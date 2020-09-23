@@ -17,6 +17,8 @@ _dataset_path = {
 
 def get_dataset(name, split='train', transform=None,
                 target_transform=None, download=True):
+    '''Download/load dataset and transform it.'''
+
     train = (split == 'train')
     if name == 'cifar10':
         return datasets.CIFAR10(root=_dataset_path['cifar10'],

@@ -4,8 +4,7 @@ import logging.config
 import shutil
 
 def setup_logging(log_file='log.txt'):
-    """Setup logging configuration
-    """
+    """Setup logging configuration"""
     logging.basicConfig(level=logging.DEBUG,
                         format="%(asctime)s - %(levelname)s - %(message)s",
                         datefmt="%Y-%m-%d %H:%M:%S",
@@ -19,6 +18,7 @@ def setup_logging(log_file='log.txt'):
 
 
 def save_checkpoint(state, is_best, path=os.path.dirname(__file__), filename='checkpoint.pth.tar', save_all=False):
+    '''Save trained model checkpoints during training'''
     filename = os.path.join(path, filename)
     torch.save(state, filename)
     if is_best:

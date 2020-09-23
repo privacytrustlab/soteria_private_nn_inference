@@ -57,6 +57,7 @@ test_loader = torch.utils.data.DataLoader(
 
 
 class Net(nn.Module):
+    '''Architecture of the network is defined in this class'''
     def __init__(self):
         super(Net, self).__init__()
         self.infl_ratio=1.25
@@ -102,6 +103,7 @@ optimizer = optim.Adam(model.parameters(), lr=args.lr)
 
 
 def train(epoch):
+    '''Train the model'''
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
         if args.cuda:
@@ -131,7 +133,9 @@ def train(epoch):
 
 
 def save_model():
-    # Saving Model architecture
+    '''Saving Model architecture and weights'''
+
+    # Saving model architecture
     dirname = os.path.dirname(__file__)
     f = open(os.path.join(dirname, "model_architecture.dat"), 'w')
     f.write(str(model))
@@ -164,6 +168,7 @@ def save_model():
 best_acc = 0.0
 
 def test():
+    '''Evaluation of trained model'''
     global best_acc
     model.eval()
     test_loss = 0

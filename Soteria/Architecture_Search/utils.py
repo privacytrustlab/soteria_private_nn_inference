@@ -1,3 +1,4 @@
+# This file contains some small utility functions used by other scripts.
 
 import os
 import random

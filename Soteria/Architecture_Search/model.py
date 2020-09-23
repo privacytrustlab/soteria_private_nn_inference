@@ -1,3 +1,5 @@
+# This file contains the model class that forms the final trained model, based on the most optimal searched model from the search process.
+
 import torch
 import torch.nn as nn
 from operators2 import *

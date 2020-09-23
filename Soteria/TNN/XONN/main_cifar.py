@@ -71,6 +71,7 @@ test_loader = torch.utils.data.DataLoader(
 
 
 class Net(nn.Module):
+    '''Model architecture is to be defined in this class.'''
     def __init__(self):
         super(Net, self).__init__()
         self.infl_ratio=1
@@ -120,6 +121,7 @@ if args.cuda:
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.AdamW(model.parameters(), lr=args.lr)
 def train(epoch):
+    '''Train the model for 1 epoch'''
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
         if args.cuda:
@@ -149,6 +151,7 @@ def train(epoch):
 
 
 def save_model():
+    '''Saving model architecture and weights'''
     # Saving Model architecture
     dirname = os.path.dirname(__file__)
     f = open(os.path.join(dirname, "model_architecture.dat"), 'w')
@@ -179,6 +182,7 @@ def save_model():
 best_acc = 0.0
 
 def test():
+    '''Evaluate the model on the test set'''
     global best_acc
     model.eval()
     test_loss = 0

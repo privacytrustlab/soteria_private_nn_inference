@@ -1,3 +1,5 @@
+# This is the main file that controls the search process.
+
 
 import argparse
 import os

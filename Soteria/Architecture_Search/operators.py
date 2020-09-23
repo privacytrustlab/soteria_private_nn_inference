@@ -1,3 +1,5 @@
+# This file contains the classes for different operations during the search phase, along with the Binarize and Ternarize operations for data/weights.
+
 import torch
 import torch.nn as nn
 import numpy as np

@@ -1,4 +1,3 @@
-
 from __future__ import print_function
 import argparse
 import torch
@@ -49,12 +48,13 @@ kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
 import pickle
 
 def unpickle(file):
-    
+    '''Loads the data from a python pickle file'''
     with open(file, 'rb') as fo:
         dictionary = pickle.load(fo, encoding='bytes')
     return dictionary
 
 def shuffle(a, b):
+    '''Shuffle two arrays such that the corresponding matching is maintained. Used to shuffle data and labels.'''
     rng_state = np.random.get_state()
     np.random.shuffle(a)
     np.random.set_state(rng_state)
@@ -62,6 +62,7 @@ def shuffle(a, b):
 
 
 def loadCIFAR(batchsize = 1):
+    '''Load CIFAR10 dataset, process it, and split it into training and test dataset.'''
     train_data = np.array([])
     train_labels = np.array([])
     for i in range(1, 6):
@@ -146,6 +147,7 @@ def loadCIFAR(batchsize = 1):
 train_loader, test_loader = loadCIFAR(batchsize=batch_size)
 
 class Net(nn.Module):
+    '''Model architecture is to be defined in this class.'''
     def __init__(self):
         super(Net, self).__init__()
         self.infl_ratio=3
@@ -211,6 +213,7 @@ if printtofile:
     resultsfile = open("results", "w+")
 
 def train(epoch):
+    '''Train the model (1 epoch)'''
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
         if args.cuda:
@@ -249,6 +252,7 @@ def train(epoch):
                     100. * batch_idx / len(train_loader), loss.data.item()))
 
 def test():
+    '''Evaluate the model on the test set.'''
     model.eval()
     test_loss = 0
     correct = 0
