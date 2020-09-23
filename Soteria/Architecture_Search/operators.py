@@ -5,6 +5,7 @@ import torch.nn as nn
 import numpy as np
 
 class OP(nn.Module):
+    '''Operation base class'''
     def __init__(self):
         super(OP, self).__init__()
 
@@ -14,6 +15,7 @@ class OP(nn.Module):
 
 
 class Identity(OP):
+    '''Identity operation'''
     def __init__(self, C_prev, C):
         super(Identity, self).__init__()
         self.incdim = (C_prev != C)
@@ -33,10 +35,12 @@ class Identity(OP):
 
 
 def Binarize(tensor):
+    '''Binarize input (tensor)'''
     return ((((tensor.sign() + 1.0)/3.0).round())*2.0 - 1.0).type(torch.cuda.FloatTensor)
 
 
 def Delta(tensor):
+    '''Calculate Delta value for ternarization process'''
     c = 0.7
     n = tensor[0].nelement()
     if(len(tensor.size()) == 4):     #convolution layer
@@ -47,6 +51,7 @@ def Delta(tensor):
 
 
 def Ternarize(tensor):
+    '''Ternarize weights (tensor)'''
     output = torch.cuda.FloatTensor(tensor.size()).fill_(0)
     delta = Delta(tensor)
     for i in range(tensor.size()[0]):
@@ -59,7 +64,7 @@ def Ternarize(tensor):
 
 
 class TernaryLinear(nn.Linear):
-
+    '''Ternary linear operation class with binary inputs and ternary weights.'''
     def __init__(self, *kargs, **kwargs):
         super(TernaryLinear, self).__init__(*kargs, **kwargs)
 
@@ -73,7 +78,7 @@ class TernaryLinear(nn.Linear):
 
 
 class TernaryConv2d_3(nn.Conv2d):
-
+    '''Ternary 2D 3x3 convolution operation class with binary inputs and ternary weights.'''
     def __init__(self, *kargs, **kwargs):
         super(TernaryConv2d_3, self).__init__(*kargs, **kwargs)
 
@@ -88,6 +93,7 @@ class TernaryConv2d_3(nn.Conv2d):
 
 
 class TernaryConv2d_5(nn.Conv2d):
+    '''Ternary 2D 5x5 convolution operation class with binary inputs and ternary weights.'''
 
     def __init__(self, *kargs, **kwargs):
         super(TernaryConv2d_5, self).__init__(*kargs, **kwargs)
@@ -103,6 +109,7 @@ class TernaryConv2d_5(nn.Conv2d):
 
 
 class TernaryMaxPool2d(nn.MaxPool2d):
+    '''Ternary 2D 2x2 Maxpool operation class with binary inputs and ternary weights.'''
 
     def __init__(self, C_prev, C, *kargs, **kwargs):
         super(TernaryMaxPool2d, self).__init__(*kargs, **kwargs)

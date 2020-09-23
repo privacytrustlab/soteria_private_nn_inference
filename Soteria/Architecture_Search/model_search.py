@@ -13,6 +13,7 @@ PRIMITIVES = [
 ]
 
 class Node(nn.Module):
+    '''This class defines a single operation position in the cell. Each node is a mix of all possible operations during search'''
     def __init__(self, C_prev, C):
         super(Node, self).__init__()
         self._ops = nn.ModuleList()
@@ -32,6 +33,7 @@ class Node(nn.Module):
 
 
 class Cell(nn.Module):
+    '''This class defines a cell'''
     def __init__(self, steps, multiplier, C_prev, C):
         super(Cell, self).__init__()
         self.steps      = steps
@@ -54,6 +56,7 @@ class Cell(nn.Module):
         return stats[-1]
 
 class Network(nn.Module):
+    '''This class defines the entire network comprising of preprocessing/postprocessing and the cells themselves'''
     def __init__(self, C, num_classes, layer, steps=2, multiplier=2, tail_scaling_factor=8):
         super(Network, self).__init__()
         self.C = C

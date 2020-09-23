@@ -17,6 +17,7 @@ inputsize = 32
 
 
 class Cell(nn.Module): 
+    '''This class defines a single cell'''
     def __init__(self, steps, multiplier, C_prev, C, weight):
         super(Cell, self).__init__()
         self.C = C
@@ -67,6 +68,7 @@ class Cell(nn.Module):
 
 
 class NetworkCIFAR(nn.Module):
+    '''This class combines all cells and preprocessing/postprocessing to build the entire architecture'''
     def __init__(self, C, num_classes, layers, steps=2, multiplier=2, tail_scaling_factor=8, arch=None):
         super(NetworkCIFAR, self).__init__()
         self.layers = layers

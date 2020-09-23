@@ -30,6 +30,7 @@ args = parser.parse_args()
 class Trainer:
     def __init__(self):
         def _create_dataset():
+            '''Obtain dataset, load and preprocess it'''
             train_transform, valid_transform = utils._data_transforms_cifar10(args)
 
             train_data = dset.CIFAR10(root=args.data, train=True, download=True, transform=train_transform)
@@ -49,6 +50,7 @@ class Trainer:
             )
         
         def _weight_manipulation(x):
+            '''Operation scores are adjusted according to the complexity of the operations''' 
             circuit_complexity_factor = 0.6     #Lambda
             complexities = [0.0, 0.41, 0.04, 1.0]
             weight_factor = torch.tensor([1-circuit_complexity_factor*complexity for complexity in complexities], requires_grad=False).cuda()
@@ -57,6 +59,7 @@ class Trainer:
             return x
 
         def _build_model():
+            '''Build the model to be trained.'''
             dirname = os.path.dirname(__file__)
             pth = torch.load(os.path.join(dirname, './trained_model', 'nas_arch.pkl'))
             arch = {
@@ -81,6 +84,7 @@ class Trainer:
         _build_model()
     
     def save_model(self):
+        '''Save model in torch pickle file'''
         dirname = os.path.dirname(__file__)
         save_folder = os.path.join(dirname, './trained_model')
         if not os.path.exists(save_folder):
@@ -88,6 +92,7 @@ class Trainer:
         torch.save(self.model.state_dict(), os.path.join(save_folder, 'nas_model.pkl'))
 
     def eval(self):
+        '''Evaluate the performance of the model on a test set'''
         self.model.eval()
         objs = utils.AvgrageMeter()
         top1 = utils.AvgrageMeter()
@@ -109,6 +114,7 @@ class Trainer:
         return top1.avg, top5.avg, objs.avg
 
     def train(self):
+        '''Train the model on the training set'''
         sche, opt = self.opt_sche, self.opt
         pre_best_acc = 0
         for epoch in range(1, args.epochs+1):
