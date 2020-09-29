@@ -2,6 +2,8 @@
 
 A system that allows secure machine learning inference in a two-party setting. The system automatically searches for an optimal ternary neural network architecture, trains it, and then builds the requisite files for secure inference.
 
+The algorithms are explained in the following research paper: Aggarwal, Anshul, Trevor E. Carlson, Reza Shokri, and Shruti Tople. "[SOTERIA: In Search of Efficient Neural Networks for Private Inference](https://arxiv.org/pdf/2007.12934)." arXiv preprint arXiv:2007.12934 (2020).
+
 ## Setup
 
 Make sure you have **docker** installed before you set up the docker image. Navigate to the code directory containing the `Dockerfile`, and execute:
